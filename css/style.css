@@ -1,0 +1,32 @@
+.jumbotron{
+  background-color: #b599a9;
+  color: black;
+}
+#header2{
+  color: #black;
+  font-size: 40;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #b599a9;
+}
+
+.carousel-indicators li {
+    border-color: #b599a9;
+}
+
+.carousel-indicators li.active {
+    background-color: #b599a9;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}

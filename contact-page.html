@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Welcome to Glaze
+  </title>
+
+
+  <!-- Get Bootstrap from here: http://getbootstrap.com/getting-started/ -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/Users/shelbyvincent/Desktop/assignment-5/CSS/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>We would love to hear from you!</h1>
+    </div>
+  </div>
+<!-- nav bar -->
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/Users/shelbyvincent/Desktop/assignment-5/home-page">Glaze</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/Users/shelbyvincent/Desktop/assignment-5/home-page">Home</a></li>
+      <li><a href="/Users/shelbyvincent/Desktop/assignment-5/about-page">About</a></li>
+      <li><a href="/Users/shelbyvincent/Desktop/assignment-5/menu-page">Menu</a></li>
+      <li><a href="/Users/shelbyvincent/Desktop/assignment-5/contact-page">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- header for page -->
+<div class="container">
+  <div class="row" id="header1">
+    <div class="col-sm-12">
+
+<!--contact info and form -->
+
+<!-- body of page -->
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us today!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Lexington, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> (859)123-4567)</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> glazedoughnuts@gmail.com</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google map insert -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(38.0406, -84.5037);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
